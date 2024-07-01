@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #e83aff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image:url('https://img.freepik.com/free-vector/technology-futuristic-background_52683-36380.jpg?w=826&t=st=1719677951~exp=1719678551~hmac=390def436723720c334c2e79658ecf6115fe562f93a219a101cc4b68cff25a87://drive.google.com/file/d/188Z5_6mpbjAftxdbwcy-kxoN4s7InvK5/view?usp=sharing');
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter:blur(3px);
+} 
+
+.home-container{
+    text-align: center;
+    margin-top: 50px;
+    margin-right: auto; 
+	margin-left: auto; 
+    padding: 20px;
+    border-radius: 10px;
+	box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2); 
+	border-radius: 5px; 
+	backdrop-filter: blur(15px); 
+	background-color: rgba(186, 93, 214, 0.514); 
+}
+
+h1 {
+    background-color: rgba(86, 11, 173, 0.8); 
+    color: #e7c3ff; 
+    padding: 10px; 
+    border-radius: 100px; 
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.scoreboard div {
+    background-color: rgba(86,11,173,0.8);
+    border-radius: 10px;
+    width: 250px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+#scoreX{
+    color: #ff0000;
+}
+
+#scoreO{
+    color: #0400ff;
+}
+.game-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 3px;
+    margin-bottom: 20px;
+    justify-content: center;
+    margin: 10 auto;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(172, 47, 184, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color:
+    #ff00aa;
+}
+
+.X{
+    color: #ff0000;
+}
+
+.O{
+    color: rgb(4, 0, 255);
+}
+
+.status {
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow:0 0 10px #000000;
+
+}
+
+button {
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    width: 6em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    margin: 20px;
+    font-size: 17px;
+    z-index: 1;
+    color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+}
+
+button::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 150px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+button:hover {
+    color: white;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: .3s all;
+}
+
+button:hover::before {
+    top: -30px;
+    left: -30px;
+}
+
+/* Specific theme for buttons with ID "play_friend" and "play_computer" */
+#play_Friend,
+#play_computer {
+    width: 10em;
+}
+
+#play_Friend::before,
+#play_computer::before {
+    width: 250px;
+}
+
+#play_Friend:hover,
+#play_computer:hover {
+    color: white;
+}
+
+#play_Friend:before,
+#play_computer:before {
+    top: 100%;
+    left: 100%;
+    transition: .3s all;
+}
+
+#play_Friend:hover::before,
+#play_computer:hover::before {
+    top: -40px;
+    left: -40px;
+}
